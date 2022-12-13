@@ -1,0 +1,281 @@
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component"></script>
+  <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+</head>
+
+<body>
+
+  <a-scene background="color:black" environment="preset:forest; ">
+    <a-text value="Welcome to Virtual shop!!" position="-5.5 4 -6" width="20" color="#684317" font="mozillavr"
+      animation="property:position; to: -5.5 10 -6; dur: 8000; easing:easeInCubic;">
+    </a-text>
+
+    <a-assets>
+      <img id="my-image" src="models/Rectangle 12.png">
+
+    </a-assets>
+    <a-curvedimage src="#my-image" height="3.0" radius="8" theta-length="150" theta-start="10" opacity="0.8"
+      rotation="0 100 0" scale="0.8 0.8 0.8"></a-curvedimage>
+
+    <a-assets>
+      <img id="my-image" src="models/Rectangle 12.png">
+
+    </a-assets>
+    <a-curvedimage src="#my-image" height="3.0" radius="5" theta-length="200" theta-start="60" opacity="0.8"
+      position="-9 0 1" rotation="0 100 0" scale="0.8 0.8 0.8"></a-curvedimage>
+
+    <a-assets>
+      <img id="my-image" src="models/Rectangle 12.png">
+
+    </a-assets>
+    <a-curvedimage src="#my-image" height="3.0" radius="5" theta-length="200" theta-start="-60" opacity="0.8"
+      position="10 0 1" rotation="0 100 0" scale="0.8 0.8 0.8"></a-curvedimage>
+
+    <a-assets>
+      <a-asset-item id="table" src="/vr3/models/wooden_table_02_2k.gltf">
+        <audio id="forest" src="/vr3/models/forest_sound.mp3"></audio>
+      </a-asset-item>
+      <img id="shadow" src="/vr3/models/shadow1.png">
+    </a-assets>
+
+    <a-entity gltf-model="#table" position="-3 0.3 -3"
+      animation="property: rotation; from: 0 -30 0; to: 0 330 0; dur: 15000; easing: linear; loop: true"
+      sound="src:#forest; autoplay:true">
+      <a-image src="#shadow" opacity="0.5" rotation="-90 0 0" scale="0.9 0.5 0.9" material="" geometry=""></a-image>
+    </a-entity>
+
+    <a-assets>
+      <a-asset-item id="cupboard" src="/vr3/models/GothicCabinet_01_2k.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-entity gltf-model="#cupboard" texture="/vr3/models/textures/GothicCabinet_01_diff_2k.jpg" position="0 0.5 -3.5"
+      scale="0.7 0.7 0.7"
+      animation="property: rotation; from: 0 -30 0; to: 0 330 0; dur: 15000; easing: linear; loop: true">
+      <a-image src="#shadow" opacity="0.5" rotation="-90 0 0" scale="2 1 2" material="" geometry=""></a-image>
+    </a-entity>
+
+    <a-assets>
+      <a-asset-item id="chair" src="/vr3/models/Rockingchair_01_2k.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-entity gltf-model="#chair" position="2.5 0.3 -3" scale="1 1 1 "
+      animation="property: rotation; from: 0 -30 0; to: 0 330 0; dur: 15000; easing: linear; loop: true">
+      <a-image src="#shadow" opacity="0.5" rotation="-90 0 0" scale="0.9 0.8 0.9" material="" geometry=""></a-image>
+    </a-entity>
+
+    <a-assets>
+      <a-asset-item id="stool" src="/vr3/models/bar_chair_round_01_2k.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-entity gltf-model="#stool" position="4.5 0.3 -2" scale="1 1 1 "
+      animation="property: rotation; from: 0 -30 0; to: 0 330 0; dur: 15000; easing: linear; loop: true">
+      <a-image src="#shadow" opacity="0.5" rotation="-90 0 0" scale="0.7 0.6 0" material="" geometry=""></a-image>
+    </a-entity>
+
+
+    <a-assets>
+      <a-asset-item id="armchair" src="/vr3/models/Armchair_01_2k.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-entity gltf-model="#armchair" position="-4.5 0.3 -1.5" scale="1 1 1 "
+      animation="property: rotation; from: 0 -30 0; to: 0 330 0; dur: 15000; easing: linear; loop: true">
+      <a-image src="#shadow" opacity="0.5" rotation="-90 0 0" scale="0.7 0.6 0" material="" geometry=""></a-image>
+    </a-entity>
+
+    <a-assets>
+      <a-asset-item id="bed" src="/vr3/models/GothicBed_01_2k.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-entity gltf-model="#bed" position="-10 0.5 4" scale="0.7 0.7 0.7"
+      animation="property: rotation; from: 0 -30 0; to: 0 330 0; dur: 15000; easing: linear; loop: true">
+      <a-image src="#shadow" opacity="0.5" rotation="-90 0 0" scale="2 1 2" material="" geometry=""></a-image>
+    </a-entity>
+
+
+    <a-assets>
+      <a-asset-item id="sofa" src="/vr3/models/sofa_03_2k.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-entity gltf-model="#sofa" position="-10 0.5 1.3" scale="0.9 0.9 0.9"
+      animation="property: rotation; from: 0 -30 0; to: 0 330 0; dur: 15000; easing: linear; loop: true">
+      <a-image src="#shadow" opacity="0.5" rotation="-90 0 0" scale="2 1 2" material="" geometry=""></a-image>
+    </a-entity>
+
+    
+    <a-assets>
+      <a-asset-item id="elephant" src="/vr3/models/carved_wooden_elephant_2k.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-entity gltf-model="#elephant" position="8 0.5 -0.5" scale="7 7 7"
+      animation="property: rotation; from: 0 -30 0; to: 0 330 0; dur: 15000; easing: linear; loop: true">
+      <a-image src="#shadow" opacity="0.5" rotation="-90 0 0" scale="0.1 0.1 0.1" material="" geometry=""></a-image>
+    </a-entity>
+
+    <a-assets>
+      <a-asset-item id="frame" src="/vr3/models/fancy_picture_frame_02_2k.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-entity gltf-model="#frame" position="12 0.5 -1" scale="1.2 1.2 1.2"
+      animation="property: rotation; from: 0 -30 0; to: 0 330 0; dur: 15000; easing: linear; loop: true">
+      <a-image src="#shadow" opacity="0.5" rotation="-90 0 0" scale="0.5 0 0.5" material="" geometry=""></a-image>
+    </a-entity>
+
+    <a-assets>
+      <a-asset-item id="clock" src="/vr3/models/vintage_grandfather_clock_01_2k.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-entity gltf-model="#clock" position="12 0.3 2" scale="1 1 1"
+      animation="property: rotation; from: 0 -30 0; to: 0 330 0; dur: 15000; easing: linear; loop: true">
+      <a-image src="#shadow" opacity="0.5" rotation="-90 0 0" scale="1 0.5 1" material="" geometry=""></a-image>
+    </a-entity>
+
+    <a-assets>
+      <img id="price" src="/vr3/models/table1.png">
+    </a-assets>
+
+    <a-curvedimage id="price" src="#price" radius="5.7" theta-length="18" theta-start="40" height=".8"
+      position="-2.5 1.6 0" scale=".4 .4 .4"
+      animation="property: rotation; from: 0 180 0; to: 0 130 0; delay: 750; dur: 1000" material=""
+      geometry=""></a-curvedimage>
+
+
+    <img id="price1" src="/vr3/models/wooden cabinet 1.png">
+    </a-assets>
+
+    <a-curvedimage id="price1" src="#price1" radius="5.7" theta-length="18" theta-start="40" height=".8"
+      position="-1 1.2 -0.5" scale=".4 .4 .4"
+      animation="property: rotation; from: 0 180 0; to: 0 130 0; delay: 750; dur: 1000" material=""
+      geometry=""></a-curvedimage>
+
+    <img id="price2" src="/vr3/models/chair1.png">
+    </a-assets>
+
+    <a-curvedimage id="price2" src="#price2" radius="5.7" theta-length="18" theta-start="40" height=".8"
+      position="1.3 1.2 -0.5" scale=".4 .4 .4"
+      animation="property: rotation; from: 0 180 0; to: 0 130 0; delay: 750; dur: 1000" material=""
+      geometry=""></a-curvedimage>
+
+    <a-assets>
+      <img id="price3" src="/vr3/models/stool.png">
+    </a-assets>
+
+    <a-curvedimage id="price3" src="#price3" radius="5.7" theta-length="18" theta-start="40" height=".8"
+      position="3.8 1 0" scale=".4 .4 .4"
+      animation="property: rotation; from: 0 180 0; to: 0 130 0; delay: 750; dur: 1000" material=""
+      geometry=""></a-curvedimage>
+
+    <a-assets>
+      <img id="price4" src="/vr3/models/armchair.png">
+    </a-assets>
+
+    <a-curvedimage id="price4" src="#price4" radius="5.7" theta-length="18" theta-start="40" height=".8"
+      position="-4 1.2 0.6" scale=".4 .4 .4"
+      animation="property: rotation; from: 0 180 0; to: 0 130 0; delay: 750; dur: 1000" material=""
+      geometry=""></a-curvedimage>
+
+    <a-assets>
+      <img id="price4" src="/vr3/models/armchair.png">
+    </a-assets>
+
+    <a-curvedimage id="price4" src="#price4" radius="5.7" theta-length="18" theta-start="40" height=".8"
+      position="-10 2 4" scale=".4 .4 .4"
+      animation="property: rotation; from: 0 180 0; to: 0 130 0; delay: 750; dur: 1000" material=""
+      geometry=""></a-curvedimage>
+
+    <img id="price1" src="/vr3/models/wooden cabinet 1.png">
+    </a-assets>
+
+    <a-curvedimage id="price1" src="#price1" radius="5.7" theta-length="18" theta-start="40" height=".8"
+      position="-10 1.7 6" scale=".4 .4 .4"
+      animation="property: rotation; from: 0 180 0; to: 0 130 0; delay: 750; dur: 1000" material=""
+      geometry=""></a-curvedimage>
+
+      <img id="price3" src="/vr3/models/stool.png">
+    </a-assets>
+
+    <a-curvedimage id="price3" src="#price3" radius="5.7" theta-length="18" theta-start="-40" height=".8"
+      position="5.5 1.3 0" scale=".4 .4 .4" 
+      animation="property: rotation; from: 0 180 0; to: 0 130 0; delay: 750; dur: 1000" material=""
+      geometry=""></a-curvedimage>
+
+      <a-assets>
+        <img id="price" src="/vr3/models/table1.png">
+      </a-assets>
+  
+      <a-curvedimage id="price" src="#price" radius="5.7" theta-length="18" theta-start="-40" height=".8"
+        position="9.5 1.2 -0.5" scale=".4 .4 .4"
+        animation="property: rotation; from: 0 180 0; to: 0 130 0; delay: 750; dur: 1000" material=""
+        geometry=""></a-curvedimage>
+
+    
+        <img id="price2" src="/vr3/models/chair1.png">
+      </a-assets>
+  
+      <a-curvedimage id="price2" src="#price2" radius="5.7" theta-length="18" theta-start="-40" height=".8"
+        position="9.5 1.2 2" scale=".4 .4 .4"
+        animation="property: rotation; from: 0 180 0; to: 0 130 0; delay: 750; dur: 1000" material=""
+        geometry=""></a-curvedimage>
+   
+
+
+
+    <a-box position="0 0.8 -2.5" depth="0.05" height="0.2" width="0.5" color="#AA0000"
+      event-set__enter="_event: mouseenter; color: #00AA00" event-set__leave="_event: mouseleave; color: #AA0000">
+      <a-text value="Buy Now" width="2.2" position="-0.2 0.02 0.1"></a-text>
+    </a-box>
+
+    <a-box position="2.3 0.8 -2.5" depth="0.05" height="0.2" width="0.5" color="#AA0000"
+      event-set__enter="_event: mouseenter; color: #00AA00" event-set__leave="_event: mouseleave; color: #AA0000">
+      <a-text value="Buy Now" width="2.2" position="-0.25 0.02 0.1"></a-text>
+    </a-box>
+
+    <a-box position="3.8 0.8 -2" depth="0.05" height="0.2" width="0.5" color="#AA0000"
+      event-set__enter="_event: mouseenter; color: #00AA00" event-set__leave="_event: mouseleave; color: #AA0000">
+      <a-text value="Buy Now" width="2.2" position="-0.25 0.02 0.1"></a-text>
+    </a-box>
+
+    <a-box position="-3.8 0.8 -2" depth="0.05" height="0.2" width="0.5" color="#AA0000"
+      event-set__enter="_event: mouseenter; color: #00AA00" event-set__leave="_event: mouseleave; color: #AA0000">
+      <a-text value="Buy Now" width="2.2" position="-0.13 0.02 0.1"></a-text>
+    </a-box>
+
+    <a-box position="-2.3 0.8 -2" depth="0.05" height="0.2" width="0.5" color="#AA0000"
+      event-set__enter="_event: mouseenter; color: #00AA00" event-set__leave="_event: mouseleave; color: #AA0000">
+      <a-text value="Buy Now" width="2.2" position="-0.13 0.02 0.1"></a-text>
+    </a-box>
+
+    <a-box position="-8.5 1 4" depth="0.5" height="0.2" width="0.05" color="#AA0000"
+      event-set__enter="_event: mouseenter; color: #00AA00" event-set__leave="_event: mouseleave; color: #AA0000">
+      <a-text value="Buy Now" width="2.2" rotation="0 90 0" position="0.1 0.02 0.2"></a-text>
+    </a-box>
+
+    <a-box position="-8.5 1 2" depth="0.5" height="0.2" width="0.05" color="#AA0000"
+      event-set__enter="_event: mouseenter; color: #00AA00" event-set__leave="_event: mouseleave; color: #AA0000">
+      <a-text value="Buy Now" width="2.2" rotation="0 90 0" position="0.1 0.02 0.2"></a-text>
+    </a-box>
+
+    <a-box position="7.5 0.5 0.1" depth="0.05" height="0.2" width="0.5" color="#AA0000"
+    event-set__enter="_event: mouseenter; color: #00AA00" event-set__leave="_event: mouseleave; color: #AA0000">
+    <a-text value="Buy Now" width="2.2"  position="-0.2 0.02 0.08"></a-text>
+  </a-box> 
+
+  <a-box position="11 0.5 -0.5" depth="0.05" height="0.2" width="0.5" color="#AA0000"
+  event-set__enter="_event: mouseenter; color: #00AA00" event-set__leave="_event: mouseleave; color: #AA0000">
+  <a-text value="Buy Now" width="2.2"  position="-0.26 0.02 0.08"></a-text>
+</a-box>
+
+<a-box position="11 0.5 2" depth="0.05" height="0.2" width="0.5" color="#AA0000"
+event-set__enter="_event: mouseenter; color: #00AA00" event-set__leave="_event: mouseleave; color: #AA0000">
+<a-text value="Buy Now" width="2.2"  position="-0.26 0.02 0.08"></a-text>
+</a-box>
+
+
+  </a-scene>
+
+  <a-entity camera position="-1.45 1.6 -6" wasd-controls look-controls> </a-entity>
+</body>
+
+</html>
